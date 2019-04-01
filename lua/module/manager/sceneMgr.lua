@@ -47,7 +47,7 @@ end
 
 function sceneMgr.clear()
     if sceneMgr.entityList then
-        for _, entity in ipairs(self.entityList) do
+        for _, entity in ipairs(sceneMgr.entityList) do
             entity:hide()
         end
         sceneMgr.entityList = nil
