@@ -12,6 +12,15 @@ function system.init()
             test.f7()
         end
     end)
+    event.onKeyPressed:Register(function(key)
+        if key == "p" then
+            pause = not pause
+        end
+        if key == "f1" then
+            local b = love.window.getFullscreen()
+            love.window.setFullscreen(not b)
+        end
+    end)
 end
 
 return system
