@@ -14,7 +14,7 @@ function heroFactory.create()
     hero:addComponent(RenderHitting)
     hero:addComponent(HitBack)
     --hero:addComponent(NearAttack)
-    hero:addComponent(BulletAttack)
+    --hero:addComponent(BulletAttack)
     hero:addComponent(HitDamage)
     hero:addComponent(DeadOnEvent)
     hero:addComponent(Animator)
@@ -24,6 +24,7 @@ function heroFactory.create()
         hp = 5,
         w = 22,
         h = 50,
+        dir = 1,
         maxVx = 100,
         friction = 15,
         layerMask = layerMask.player,

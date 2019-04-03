@@ -16,9 +16,6 @@ function Ability:onEnable()
                 if self.onAbilityPhaseStart then
                     self:onAbilityPhaseStart()
                 end
-                --if self.onSpellStart then
-                --    self:onSpellStart()
-                --end
             end
         end
     end)
