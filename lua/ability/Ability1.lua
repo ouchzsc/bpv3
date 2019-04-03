@@ -12,4 +12,8 @@ function Ability1:onGetAbilityCastPoint()
     return 0.456
 end
 
+function Ability1:onGetAnimCfg()
+    return animations.hero_attack1
+end
+
 return Ability1

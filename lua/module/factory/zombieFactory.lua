@@ -16,7 +16,7 @@ function zombieFactory.create()
     zombie:addComponent(EnemyHp)
     zombie:addComponent(HitDamage)
     zombie:addComponent(DeadOnEvent)
-    zombie:addComponent(RenderAnim)
+    zombie:addComponent(Animator)
     zombie:setData({
         name = "zombie",
         hp = 4,
@@ -25,24 +25,7 @@ function zombieFactory.create()
         h = 50,
         maxVx = 50,
         layerMask = layerMask.zombie,
-        animcfg = {
-            imgPath = "img/zombieattack.png",
-            width = 20,
-            height = 25,
-            space = 2,
-            cnt = 4,
-            fps = 6,
-            scale = 2
-        },
-        --        animcfg = {
-        --            imgPath = "img/zombiewalk.png",
-        --            width = 15,
-        --            height = 25,
-        --            space = 9,
-        --            cnt = 3,
-        --            fps = 3,
-        --            scale = 2
-        --        },
+        animcfg = animations.zombie_attack,
     })
     return zombie
 end

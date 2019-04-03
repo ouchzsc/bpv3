@@ -1,7 +1,8 @@
-local RenderAnim = Component:extends()
+local Animator = Component:extends()
 
-function RenderAnim:onEnable()
-    self:scheduleTimerAtFixedRate("anim", 0, 1 / self.entity.animcfg.fps, function()
+function Animator:onEnable()
+    local animcfg = self.entity.animcfg
+    self:scheduleTimerAtFixedRate("anim", 0, animcfg.loopTime / animcfg.cnt, function()
         if self.quads then
             self.index = self.index or 1
             self.index = self.index + 1
@@ -12,11 +13,11 @@ function RenderAnim:onEnable()
     end)
 end
 
-function RenderAnim:onPopEvent(type)
+function Animator:onPopEvent(type)
     if type == "cameraDraw" then
         local entity = self.entity
         local animcfg = entity.animcfg
-        if self.img == nil then
+        if self.img == nil or self.animcfg ~= animcfg then
             if animcfg == nil then
                 return
             end
@@ -25,6 +26,8 @@ function RenderAnim:onPopEvent(type)
             local height = animcfg.height
             local space = animcfg.space
             local quadCnt = animcfg.cnt
+            self.index = 1
+            self.animcfg = animcfg
 
             self.img = love.graphics.newImage(imgPath)
             self.quads = {}
@@ -48,4 +51,4 @@ function RenderAnim:onPopEvent(type)
     end
 end
 
-return RenderAnim
+return Animator

@@ -7,8 +7,26 @@ function animations.init()
         height = 24,
         space = 0,
         cnt = 9,
-        fps = 12,
+        loopTime = 0.6,
         scale = 2,
+    }
+    animations.hero_idle = {
+        imgPath = "img/idle.png",
+        width = 11,
+        height = 25,
+        space = 1,
+        cnt = 5,
+        loopTime = 0.5,
+        scale = 2,
+    }
+    animations.zombie_attack= {
+        imgPath = "img/zombieattack.png",
+        width = 20,
+        height = 25,
+        space = 2,
+        cnt = 4,
+        loopTime = 0.86,
+        scale = 2
     }
 end
 

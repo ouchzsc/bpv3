@@ -17,7 +17,7 @@ function heroFactory.create()
     hero:addComponent(BulletAttack)
     hero:addComponent(HitDamage)
     hero:addComponent(DeadOnEvent)
-    hero:addComponent(RenderAnim)
+    hero:addComponent(Animator)
 
     hero:setData({
         name = 'hero',
@@ -32,15 +32,8 @@ function heroFactory.create()
         bulletLayer = layerMask.playerBullet,
         axMap = {},
         ayMap = {},
-        animcfg = {
-            imgPath = "img/idle.png",
-            width = 11,
-            height = 25,
-            space = 1,
-            cnt = 5,
-            fps = 5,
-            scale = 2,
-        },
+        animcfg = animations.hero_idle,
+        defaultAnimCfg = animations.hero_idle,
     })
     return hero
 end
