@@ -6,12 +6,6 @@ function Entity:onNew()
 end
 
 function Entity:show()
-    if not self.inited then
-        if self.onInit then
-            self:onInit()
-        end
-        self.inited = true
-    end
     if self.isEnable then
         return
     end

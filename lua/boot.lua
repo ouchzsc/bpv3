@@ -6,9 +6,12 @@ function boot.start()
     layerMask.init()
     event.init()
     timer.init()
+    animations.init()
+    system:init()
     local cam = camMgr.get()
     cam:show()
-    sceneMgr.switchTo("config/map1.csv")
+    s1 = sceneFactory:create(Scene1, "config/map1.csv")
+    s1:getComponent(Scene1):load()
 end
 
 return boot
