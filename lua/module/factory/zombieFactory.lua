@@ -12,7 +12,8 @@ function zombieFactory.create()
     zombie:addComponent(PopHitEvent)
     zombie:addComponent(RenderHitting)
     zombie:addComponent(HitBack)
-    zombie:addComponent(NearAttack)
+    --zombie:addComponent(NearAttack)
+    zombie:addComponent(Ability_NearAttack)
     zombie:addComponent(EnemyHp)
     zombie:addComponent(HitDamage)
     zombie:addComponent(DeadOnEvent)
@@ -21,11 +22,13 @@ function zombieFactory.create()
         name = "zombie",
         hp = 4,
         maxHp = 4,
+        dir = 1,
         w = 30,
         h = 50,
         maxVx = 50,
         layerMask = layerMask.zombie,
-        animcfg = animations.zombie_attack,
+        ACT_IDLE = animations.zombie_attack,
+        ACT_CAST_ABILITY_1 = animations.zombie_attack,
     })
     return zombie
 end

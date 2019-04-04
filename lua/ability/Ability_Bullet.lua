@@ -1,6 +1,6 @@
-local Ability1 = Ability:extends()
+local Ability_Bullet = Ability:extends()
 
-function Ability1:onSpellStart()
+function Ability_Bullet:onSpellStart()
     local entity = self.entity
     local dir = entity.dir
     local x, y
@@ -25,16 +25,16 @@ function Ability1:onSpellStart()
     bullet:show()
 end
 
-function Ability1:onGetCd()
+function Ability_Bullet:onGetCd()
     return 0.6
 end
 
-function Ability1:onGetAbilityCastPoint()
+function Ability_Bullet:onGetAbilityCastPoint()
     return 0.3
 end
 
-function Ability1:onGetAnimCfg()
-    return animations.hero_attack1
+function Ability_Bullet:onGetAbilityCastAnimation()
+    return "ACT_CAST_ABILITY_1"
 end
 
-return Ability1
+return Ability_Bullet

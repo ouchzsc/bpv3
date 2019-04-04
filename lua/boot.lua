@@ -10,8 +10,7 @@ function boot.start()
     system:init()
     local cam = camMgr.get()
     cam:show()
-    s1 = sceneFactory:create(Scene1, "config/map1.csv")
-    s1:getComponent(Scene1):load()
+    sceneMgr.load(Scene1, "config/map1.csv")
 end
 
 return boot

@@ -4,21 +4,19 @@ function Ability:setAnimation(animCfg)
 
 end
 
-function Ability:onEnable()
-    self:reg(event.onCmdUpdate, function(dt)
-        if love.mouse.isDown(1) then
-            -- todo 如果有其他的技能在施法中，要么不让施法，要么先打断其他施法
-            if self:getLeftCd() > 0 then
-                return
-            else
-                self:setLastTime(timer.now)
-                self:_startPlayAnim()
-                if self.onAbilityPhaseStart then
-                    self:onAbilityPhaseStart()
-                end
+function Ability:onPopEvent(type, data)
+    if type == "attack" then
+        -- todo 如果有其他的技能在施法中，要么不让施法，要么先打断其他施法
+        if self:getLeftCd() > 0 then
+            return
+        else
+            self:setLastTime(timer.now)
+            self:_startPlayAnim()
+            if self.onAbilityPhaseStart then
+                self:onAbilityPhaseStart()
             end
         end
-    end)
+    end
 end
 
 function Ability:onGetAbilityCastPoint()
@@ -27,10 +25,6 @@ end
 
 function Ability:onGetCd()
     return 10
-end
-
-function Ability:onGetAnimCfg()
-
 end
 
 function Ability:getLeftCd()
@@ -47,8 +41,9 @@ end
 
 function Ability:_startPlayAnim()
     local entity = self.entity
-    local animcfg = self:onGetAnimCfg()
-    entity.animcfg = animcfg
+    local animationKey = self:onGetAbilityCastAnimation()
+    local animcfg = entity[animationKey]
+    self.entity:popEvent("Aniamtor_Play", animcfg)
     local animtime = animcfg.loopTime
     self:scheduleTimer("anim_duration", animtime, function()
         self:_stopPlayAnim()
@@ -60,7 +55,7 @@ end
 
 function Ability:_stopPlayAnim()
     local entity = self.entity
-    entity.animcfg = entity.defaultAnimCfg
+    self.entity:popEvent("Aniamtor_Play", entity.ACT_IDLE)
 end
 
 return Ability

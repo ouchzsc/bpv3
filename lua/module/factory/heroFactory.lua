@@ -2,10 +2,10 @@ local heroFactory = {}
 
 function heroFactory.create()
     local hero = Entity:new()
-    hero:addComponent(RenderRect)
+    --hero:addComponent(RenderRect)
     hero:addComponent(GameObject)
     hero:addComponent(PlayerCmd)
-    hero:addComponent(Ability1)
+    hero:addComponent(Ability_Bullet)
     hero:addComponent(PhysicsMove)
     hero:addComponent(RecoverJumpForceByLand)
     hero:addComponent(Gravity)
@@ -13,8 +13,6 @@ function heroFactory.create()
     hero:addComponent(PopHitEvent)
     hero:addComponent(RenderHitting)
     hero:addComponent(HitBack)
-    --hero:addComponent(NearAttack)
-    --hero:addComponent(BulletAttack)
     hero:addComponent(HitDamage)
     hero:addComponent(DeadOnEvent)
     hero:addComponent(Animator)
@@ -33,8 +31,8 @@ function heroFactory.create()
         bulletLayer = layerMask.playerBullet,
         axMap = {},
         ayMap = {},
-        animcfg = animations.hero_idle,
-        defaultAnimCfg = animations.hero_idle,
+        ACT_IDLE = animations.hero_idle,
+        ACT_CAST_ABILITY_1 = animations.hero_attack1,
     })
     return hero
 end
