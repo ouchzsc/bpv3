@@ -48,14 +48,14 @@ function Scene:createEntity(v, x, y)
         })
         heroMgr.set(entity)
     elseif v == "zombie" then
-        entity = zombieFactory:create()
+        entity = zombieFactory.create()
         entity:setData({ x = x, y = y })
     elseif v == "slime" then
-        entity = slimeFactory:create()
+        entity = slimeFactory.create()
         entity:setData({ x = x, y = y })
     elseif utils.startwith(v, "door") then
         local ts = utils.split(v, ":")
-        entity = doorFactory:create()
+        entity = doorFactory.create()
         entity:setData({ x = x, y = y, mapPath = ts[2] })
     end
     return entity
