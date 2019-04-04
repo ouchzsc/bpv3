@@ -5,17 +5,17 @@ function Ability_NearAttack:onSpellStart()
     local dir = entity.dir
     local x, y
     if dir > 0 then
-        x = entity.x + entity.w + 3
+        x = entity.x + entity.w
     else
-        x = entity.x - entity.w - 3
+        x = entity.x - entity.w
     end
-    y = entity.y + entity.h / 2
+    y = entity.y
     local bullet = projectileFactory:createStill({
         caster = entity,
         x = x,
         y = y,
-        w = 100,
-        h = 100,
+        w = entity.w,
+        h = entity.h,
         timerLife = 0.5,
         v = 800,
         dir = dir,
