@@ -20,6 +20,9 @@ function system.init()
             local b = love.window.getFullscreen()
             love.window.setFullscreen(not b)
         end
+        if key=="escape" then
+            love.event.quit()
+        end
     end)
 end
 
