@@ -17,14 +17,27 @@ function Ability:onPopEvent(type, data)
             end
         end
     end
+    if type == "Ability_onProjectileHit" then
+        if self:onProjectileHit({ target = data.target, projectile = data.projectile }) then
+            data.projectile:hide()
+        end
+    end
+end
+
+function Ability:onProjectileHit(data)
+    return false
 end
 
 function Ability:onGetAbilityCastPoint()
     return 0.5
 end
 
+function Ability:onGetAbilityCastAnimation()
+    return "ACT_CAST_ABILITY_1"
+end
+
 function Ability:onGetCd()
-    return 10
+    return 2
 end
 
 function Ability:getLeftCd()
@@ -56,6 +69,13 @@ end
 function Ability:_stopPlayAnim()
     local entity = self.entity
     self.entity:popEvent("Aniamtor_Play", entity.ACT_IDLE)
+end
+
+function Ability:addModifier(cls)
+    if self.entity.modifiers==nil then
+        self.entity.modifiers = Stream:New()
+    end
+    self.entity.modifiers:Put(cls)
 end
 
 return Ability

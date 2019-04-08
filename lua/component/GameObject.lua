@@ -64,9 +64,12 @@ function GameObject:onLateUpdate(dt)
             elseif entity.vx < 0 and col.normal.x > 0 then
                 entity.vx = 0
             end
+            col.item:popEvent("onCollision", { col = col, other = col.other })
+            col.other:popEvent("onCollision", { col = col, other = col.item })
+        elseif col.type == 'cross' then
+            col.item:popEvent("onTrigger", { col = col, other = col.other })
+            col.other:popEvent("onTrigger", { col = col, other = col.item })
         end
-        col.item:popEvent("onCollision", { col = col, other = col.other })
-        col.other:popEvent("onCollision", { col = col, other = col.item })
     end
 end
 

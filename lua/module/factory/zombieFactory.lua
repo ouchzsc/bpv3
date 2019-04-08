@@ -12,16 +12,15 @@ function zombieFactory.create()
     zombie:addComponent(PopHitEvent)
     zombie:addComponent(RenderHitting)
     zombie:addComponent(HitBack)
-    --zombie:addComponent(NearAttack)
     zombie:addComponent(Ability_NearAttack)
     zombie:addComponent(EnemyHp)
-    zombie:addComponent(HitDamage)
-    zombie:addComponent(DeadOnEvent)
     zombie:addComponent(Animator)
+    zombie:addComponent(Hp)
     zombie:setData({
         name = "zombie",
         hp = 4,
         maxHp = 4,
+        teamId = 2,
         dir = 1,
         w = 30,
         h = 50,

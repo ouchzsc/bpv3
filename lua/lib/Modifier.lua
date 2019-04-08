@@ -1,10 +1,14 @@
 local Modifier = Component:extends()
 
-function Modifier:OnCreated()
+function Modifier:onCreated()
 
 end
 
-function Modifier:OnDestroy()
+function Modifier:onDestroy()
+
+end
+
+function Modifier:onGetModifierMoveSpeedBonus_Constant()
 
 end
 

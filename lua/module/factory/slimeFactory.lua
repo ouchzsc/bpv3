@@ -13,12 +13,12 @@ function slimeFactory:create()
     entity:addComponent(RenderHitting)
     entity:addComponent(HitBack)
     entity:addComponent(EnemyHp)
-    entity:addComponent(HitDamage)
-    entity:addComponent(DeadOnEvent)
+    entity:addComponent(Hp)
     entity:setData({
         name = "slime",
         hp = 10,
         maxHp = 10,
+        teamId = 2,
         w = 25,
         h = 25,
         maxVx = 150,

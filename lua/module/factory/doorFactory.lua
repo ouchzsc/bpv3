@@ -6,7 +6,7 @@ function doorFactory.create()
     entity:addComponent(MapDoor)
     entity:setData({
         name = "door",
-        layerMask = layerMask.brick,
+        layerMask = layerMask.projectile,
         mapPath = mapPath,
     })
     return entity

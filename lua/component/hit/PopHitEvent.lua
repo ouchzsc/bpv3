@@ -18,5 +18,4 @@ function PopHitEvent:onPopEvent(type, data)
         end
     end
 end
-
 return PopHitEvent

@@ -3,8 +3,8 @@ local time = 0.2
 local backVx, backVy = 800, -50
 function HitBack:onPopEvent(type, data)
     local entity = self.entity
-    if type == "beHit" then
-        local col, other = data.col, data.other
+    if type == "HitBack" then
+        local other = data.other
         if other.x > entity.x then
             self.vx = -backVx
         else

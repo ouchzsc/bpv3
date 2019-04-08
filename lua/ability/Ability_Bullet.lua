@@ -10,7 +10,7 @@ function Ability_Bullet:onSpellStart()
         x = entity.x - entity.w - 3
     end
     y = entity.y + entity.h / 2
-    local bullet = projectileFactory:create({
+    local bullet = projectileFactory.create({
         caster = entity,
         x = x,
         y = y,
@@ -35,6 +35,21 @@ end
 
 function Ability_Bullet:onGetAbilityCastAnimation()
     return "ACT_CAST_ABILITY_1"
+end
+
+function Ability_Bullet:onProjectileHit(data)
+    local target = data.target
+    local projectile = data.projectile
+    if target.layerMask == layerMask.brick then
+        return true
+    else
+        if self.entity.teamId ~= target.teamId then
+            target:popEvent("Hp_Damage", { damage = 1 })
+            target:popEvent("HitBack",{other = projectile})
+            return true
+        end
+        return false
+    end
 end
 
 return Ability_Bullet

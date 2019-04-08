@@ -1,6 +1,6 @@
 local layerMask = {}
 
-local player, playerBullet, zombie, enemyBullet, brick, trigger, slime = 0, 1, 2, 3, 4, 5, 6
+local player, playerBullet, zombie, enemyBullet, brick, trigger, slime, projectile = 0, 1, 2, 3, 4, 5, 6, 7
 
 local function getLayerTag(layer)
     return bit.lshift(1, layer)
@@ -49,6 +49,12 @@ function layerMask.init()
     layerMask.brick.tag = getLayerTag(brick)
     layerMask.brick.col = bitOrLayer(player, playerBullet, zombie, enemyBullet, brick, slime)
     layerMask.brick.dmg = 0
+
+    layerMask.projectile = {}
+    layerMask.projectile.tag = getLayerTag(projectile)
+    layerMask.projectile.col = 0
+    layerMask.projectile.dmg = 0
+
 end
 
 function layerMask.collideWith(a, b)

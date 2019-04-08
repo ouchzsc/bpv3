@@ -6,6 +6,7 @@ function heroFactory.create()
     hero:addComponent(GameObject)
     hero:addComponent(PlayerCmd)
     hero:addComponent(Ability_Bullet)
+    --hero:addComponent(Ability_Magic1)
     hero:addComponent(PhysicsMove)
     hero:addComponent(RecoverJumpForceByLand)
     hero:addComponent(Gravity)
@@ -13,8 +14,6 @@ function heroFactory.create()
     hero:addComponent(PopHitEvent)
     hero:addComponent(RenderHitting)
     hero:addComponent(HitBack)
-    hero:addComponent(HitDamage)
-    hero:addComponent(DeadOnEvent)
     hero:addComponent(Animator)
 
     hero:setData({
@@ -22,6 +21,7 @@ function heroFactory.create()
         hp = 5,
         w = 22,
         h = 50,
+        teamId = 1,
         dir = 1,
         maxVx = 100,
         friction = 15,

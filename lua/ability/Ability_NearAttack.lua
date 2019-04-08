@@ -10,7 +10,7 @@ function Ability_NearAttack:onSpellStart()
         x = entity.x - entity.w
     end
     y = entity.y
-    local bullet = projectileFactory:createStill({
+    local bullet = projectileFactory.createStill({
         caster = entity,
         x = x,
         y = y,

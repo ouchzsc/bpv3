@@ -12,6 +12,9 @@ end
 
 function Animator:onPopEvent(type,data)
     if type == "cameraDraw" then
+        if self.animcfg==nil then
+            return
+        end
         local entity = self.entity
         local x, y = entity.x, entity.y
         local w, h = self.animcfg.width, self.animcfg.height
