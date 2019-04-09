@@ -1,8 +1,7 @@
---local StreamMap = require "lua.common.StreamMap"
 local Entity = Object:extends()
 
 function Entity:onNew()
-    self.components = StreamMap:New()
+    self.components = Stream:New()
 end
 
 function Entity:show()
@@ -10,7 +9,7 @@ function Entity:show()
         return
     end
     self.isEnable = true
-    self.components:ForEach(function(cls, com)
+    self.components:ForEach(function(com, id)
         com:setActive(true)
     end)
 end
@@ -20,41 +19,43 @@ function Entity:hide()
         return
     end
     self.isEnable = false
-    self.components:ForEach(function(cls, com)
+    self.components:ForEach(function(com, id)
         com:setActive(false)
     end)
 end
 
-function Entity:addComponents(types)
-    for _, v in pairs(types) do
-        self:addComponent(v)
-    end
-end
-
 function Entity:addComponent(comCls)
     local com = comCls:new({ entity = self })
-    self.components:Put(comCls, com)
+    self.components:Add(com)
     if self.isEnable then
         com:setActive(true)
     end
+    return com
 end
 
 function Entity:removeComponent(comCls)
-    local com = self.components:Get(comCls)
-    if com then
-        com:setActive(false)
-        com.entity = nil
-        com:destroy()
-        self.components:Remove(comCls)
-    end
+    self.components:ForEach(function(com, id)
+        if getmetatable(com) == comCls then
+            com:setActive(false)
+            com.entity = nil
+            com:destroy()
+            self.components:Delete(id)
+        end
+    end)
 end
 
 function Entity:getComponent(comCls)
-    return self.components:Get(comCls)
+    local targetCom = nil
+    self.components:ForEach(function(com, id)
+        if getmetatable(com) == comCls then
+            targetCom = com
+        end
+    end)
+    return targetCom
 end
 
 function Entity:popEvent(eventtype, data)
-    self.components:ForEach(function(cls, com)
+    self.components:ForEach(function(com, id)
         if com.isActive and com.onPopEvent then
             com:onPopEvent(eventtype, data)
         end

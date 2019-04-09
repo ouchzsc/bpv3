@@ -1,11 +1,11 @@
 local test ={}
 
 function test.f6()
-    s1:getComponent(Scene1):load()
+    entity:removeComponent(EmptyCom)
 end
 
 function test.f7()
-    s1:getComponent(Scene1):clear()
+    entity:show()
 end
 
 return test
