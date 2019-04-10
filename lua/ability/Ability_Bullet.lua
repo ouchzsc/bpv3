@@ -43,9 +43,11 @@ function Ability_Bullet:onProjectileHit(data)
     if target.layerMask == layerMask.brick then
         return true
     else
+        --击中敌人
         if self.entity.teamId ~= target.teamId then
             target:popEvent("Hp_Damage", { damage = 1 })
             target:popEvent("HitBack",{other = projectile})
+            target:addComponent(Modifier_Stun)
             return true
         end
         return false

@@ -13,7 +13,7 @@ function AccSystem:onAccSystemUpdate(dt)
     entity.ayMap = entity.ayMap or {}
     entity.vx = entity.vx or 0
     entity.vy = entity.vy or 0
-    local maxVx, maxVy = entity.maxVx or defaultMaxVx, entity.maxVy or defaultMaxVy
+    local maxVx, maxVy = entity.speedPer * entity.speedBase, entity.maxVy or defaultMaxVy
     local minVy = entity.minVy or defaultMinVy
 
     local ax = 0

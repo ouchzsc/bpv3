@@ -37,6 +37,15 @@ function animations.init()
         loopTime = 0.86,
         scale = 2
     }
+    animations.effect_slow={
+        imgPath = "img/effect_slow.png",
+        width = 50,
+        height = 50,
+        space = 0,
+        cnt = 4,
+        loopTime = 0.4,
+        scale = 2
+    }
 end
 
 return animations

@@ -31,16 +31,25 @@ function PhysicsMove:onEnable()
         entity.vy = entity.vy or 0
 
         local x, y = entity.cmdX or 0, entity.cmdY or 0
-        if not entity.isGrounded then -- 在空中
-            if y < 0 then --向上
-                if not entity.released then -- 之前没松手
-                    if entity.jumpEnergy > 0 then --还有能量
+        if self.entity.stunCnt and self.entity.stunCnt > 0 then
+            x, y = 0, 0
+        end
+
+        if not entity.isGrounded then
+            -- 在空中
+            if y < 0 then
+                --向上
+                if not entity.released then
+                    -- 之前没松手
+                    if entity.jumpEnergy > 0 then
+                        --还有能量
                         entity.released = false
                         entity.jumpEnergy = entity.jumpEnergy - dt
                         entity.jumpTime = entity.jumpTime
                         entity.ayMap.axis1 = -ay
                         entity.vy = entity.vy or 0
-                    else --没有能量
+                    else
+                        --没有能量
                         entity.released = false
                         entity.jumpEnergy = 0
                         entity.jumpTime = entity.jumpTime
@@ -54,8 +63,10 @@ function PhysicsMove:onEnable()
                             entity.ayMap.axis1 = 0
                         end
                     end
-                else --之前松过手
-                    if entity.jumpTime > 0 then -- 还能跳
+                else
+                    --之前松过手
+                    if entity.jumpTime > 0 then
+                        -- 还能跳
                         entity.jumpEnergy = maxJumpEnergy
                         entity.jumpTime = entity.jumpTime - 1
                         entity.released = false
@@ -64,7 +75,8 @@ function PhysicsMove:onEnable()
                         if x ~= 0 then
                             entity.vx = jumpXSpeed * x
                         end
-                    else --没有跳跃次数
+                    else
+                        --没有跳跃次数
                         entity.jumpEnergy = 0
                         entity.jumpTime = 0
                         entity.released = false
@@ -79,22 +91,27 @@ function PhysicsMove:onEnable()
                         end
                     end
                 end
-            elseif y == 0 then --y方向没按
+            elseif y == 0 then
+                --y方向没按
                 entity.jumpEnergy = 0
                 entity.jumpTime = entity.jumpTime
                 entity.released = true
                 entity.ayMap.axis1 = 0
                 entity.vy = entity.vy
-            else -- y<0 向下加速，这个可以是技能
+            else
+                -- y<0 向下加速，这个可以是技能
                 entity.jumpEnergy = 0
                 entity.jumpTime = entity.jumpTime
                 entity.released = true
                 entity.ayMap.axis1 = ay
                 entity.vy = entity.vy
             end
-        else -- 在地上
-            if y < 0 then --按上
-                if entity.released then --之前松手了
+        else
+            -- 在地上
+            if y < 0 then
+                --按上
+                if entity.released then
+                    --之前松手了
                     if entity.jumpTime > 0 then
                         entity.jumpTime = entity.jumpTime - 1
                         entity.jumpEnergy = maxJumpEnergy
@@ -111,7 +128,8 @@ function PhysicsMove:onEnable()
                         entity.ayMap.axis1 = 0
                         entity.vy = entity.vy
                     end
-                else --之前没松手
+                else
+                    --之前没松手
                     if entity.jumpEnergy > 0 then
                         entity.jumpTime = entity.jumpTime
                         entity.jumpEnergy = entity.jumpEnergy - dt
@@ -126,7 +144,8 @@ function PhysicsMove:onEnable()
                         entity.vy = entity.vy
                     end
                 end
-            else --没按上
+            else
+                --没按上
                 entity.jumpTime = entity.maxJumpTime or defaulMaxJumpTime
                 entity.jumpEnergy = 0
                 entity.released = true
@@ -134,7 +153,6 @@ function PhysicsMove:onEnable()
                 entity.vy = 0
             end
         end
-
 
         entity.axMap = entity.axMap or {}
         entity.axMap.fraction = entity.axMap.fraction or 0
