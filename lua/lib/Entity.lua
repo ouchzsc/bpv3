@@ -20,15 +20,11 @@ function Entity:hide()
         return
     end
     self.isEnable = false
+
+    -- disable components
     self.components:ForEach(function(com, id)
         com:setActive(false)
     end)
-    if self.children then
-        for child, v in pairs(self.children) do
-            child:hide()
-        end
-        self.children = nil
-    end
 end
 
 function Entity:addComponent(comCls)
@@ -91,13 +87,5 @@ function Entity:popEvent(eventtype, data)
     end)
 end
 
-function Entity:addChild(child)
-    self.children = self.children or {}
-    self.children[child] = true
-end
-
-function Entity:removeChild(child)
-    self.children[child] = nil
-end
 
 return Entity

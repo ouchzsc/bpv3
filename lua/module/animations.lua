@@ -43,8 +43,8 @@ function animations.init()
         height = 50,
         space = 0,
         cnt = 4,
-        loopTime = 0.4,
-        scale = 2
+        loopTime = 2,
+        scale = 1.5
     }
 end
 

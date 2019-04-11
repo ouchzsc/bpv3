@@ -47,7 +47,7 @@ function Ability_Bullet:onProjectileHit(data)
         if self.entity.teamId ~= target.teamId then
             target:popEvent("Hp_Damage", { damage = 1 })
             target:popEvent("HitBack",{other = projectile})
-            target:addComponent(Modifier_Stun)
+            target:addComponent(Modifier_Slow)
             return true
         end
         return false
