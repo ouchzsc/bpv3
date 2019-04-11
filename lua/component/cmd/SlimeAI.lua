@@ -2,9 +2,9 @@ local SlimeAI = Component:extends()
 local defaultViewWidth, defaultViewHeight = 600, 300
 function SlimeAI:onEnable()
     local entity = self.entity
-    self:scheduleTimerAtFixedRate("slimecmd", 0, 3, function()
+    self:scheduleTimerAtFixedRate("slimecmd", 0, 2, function()
         self.targetEntity = utils.findTarget(entity.x, entity.y, defaultViewWidth, defaultViewHeight, function(item)
-            return item.layerMask == layerMask.player
+            return item.layerMask == layerMask.player and item.teamId ~= entity.teamId
         end)
         if self.targetEntity then
             local x, y = entity.x or 0, entity.y or 0
@@ -28,6 +28,5 @@ function SlimeAI:onEnable()
         end
     end)
 end
-
 
 return SlimeAI

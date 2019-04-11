@@ -9,7 +9,6 @@ function slimeFactory:create()
     entity:addComponent(GameObject)
     entity:addComponent(PhysicsMove)
     entity:addComponent(SlimeAI)
-    entity:addComponent(PopHitEvent)
     entity:addComponent(RenderHitting)
     entity:addComponent(HitBack)
     entity:addComponent(EnemyHp)
@@ -25,7 +24,7 @@ function slimeFactory:create()
         speedPer = 1,
         friction = 50,
         color = { 1, 0.5, 0.5, 1 },
-        layerMask = layerMask.slime,
+        layerMask = layerMask.player,
     })
     return entity
 end

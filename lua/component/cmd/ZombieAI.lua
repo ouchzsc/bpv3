@@ -21,7 +21,7 @@ function ZombieAI:findTarget()
     local viewWidth = entity.viewWidth or defaulViewWidth
     local viewHeight = entity.viewHeight or defaulViewHeight
     entity.attackTarget = utils.findTarget(entity.x, entity.y, viewWidth, viewHeight, function(item)
-        return item.layerMask == layerMask.player
+        return item.layerMask == layerMask.player and item.teamId ~= entity.teamId
     end)
 end
 

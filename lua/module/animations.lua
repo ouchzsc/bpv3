@@ -44,7 +44,7 @@ function animations.init()
         space = 0,
         cnt = 4,
         loopTime = 2,
-        scale = 1.5
+        scale = 1
     }
 end
 

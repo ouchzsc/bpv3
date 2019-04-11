@@ -20,7 +20,7 @@ function Ability_NearAttack:onSpellStart()
         v = 800,
         dir = dir,
         color = { 1, 0.5, 0.6, 1 },
-        layerMask = layerMask.playerBullet,
+        layerMask = layerMask.bullet,
     })
     bullet:show()
 end

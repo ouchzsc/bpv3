@@ -2,14 +2,13 @@ local zombieFactory = {}
 
 function zombieFactory.create()
     local zombie = Entity:new()
-    zombie:addComponent(RenderRect)
+    --zombie:addComponent(RenderRect)
     zombie:addComponent(RecoverJumpForceByLand)
     zombie:addComponent(Gravity)
     zombie:addComponent(AccSystem)
     zombie:addComponent(GameObject)
     zombie:addComponent(PhysicsMove)
     zombie:addComponent(ZombieAI)
-    zombie:addComponent(PopHitEvent)
     zombie:addComponent(RenderHitting)
     zombie:addComponent(HitBack)
     zombie:addComponent(Ability_NearAttack)
@@ -26,7 +25,7 @@ function zombieFactory.create()
         h = 50,
         speedBase = 50,
         speedPer = 1,
-        layerMask = layerMask.zombie,
+        layerMask = layerMask.player,
         ACT_IDLE = animations.zombie_attack,
         ACT_CAST_ABILITY_1 = animations.zombie_attack,
     })

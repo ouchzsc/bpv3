@@ -10,6 +10,7 @@ function Modifier_Slow:onEnable()
 end
 
 function Modifier_Slow:onDisable()
+    Modifier.onDisable(self)
     self.effect:hide()
 end
 

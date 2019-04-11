@@ -11,6 +11,7 @@ function effectFactory.create(data)
     entity.sortingOrder = 1
     entity.name = "effect"
     entity.targetEntity = data.targetEntity
+    entity.layerMask = layerMask.trigger
     return entity
 end
 

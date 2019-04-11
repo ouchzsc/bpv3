@@ -1,5 +1,4 @@
 local projectileFactory = {}
-local defaultBulletColor = { 1, 0, 0, 1 }
 
 function projectileFactory.create(data)
     local bulletEntity = Entity:new()
@@ -19,7 +18,7 @@ function projectileFactory.create(data)
         v = data.v,
         dir = data.dir,
         color = data.color,
-        layerMask = layerMask.projectile,
+        layerMask = layerMask.trigger,
         caster = data.caster,
     })
     return bulletEntity
@@ -42,7 +41,7 @@ function projectileFactory.createStill(data)
         v = data.v,
         dir = data.dir,
         color = data.color,
-        layerMask = layerMask.projectile,
+        layerMask = layerMask.trigger,
         caster = data.caster,
     })
     return bulletEntity
@@ -64,7 +63,7 @@ function projectileFactory.createAnimated(data)
         h = data.h,
         timeLife = data.timeLife,
         dir = data.dir,
-        layerMask = layerMask.projectile,
+        layerMask = layerMask.trigger,
         caster = data.caster,
         animcfg = data.animcfg,
     })

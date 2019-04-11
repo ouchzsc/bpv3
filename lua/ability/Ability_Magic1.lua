@@ -10,7 +10,7 @@ function Ability_Magic1:onSpellStart()
                    v = 800,
                    dir = self.entity.dir,
                    color = { 0, 0.5, 0.6, 1 },
-                   layerMask = layerMask.projectile,
+                   layerMask = layerMask.trigger,
                    animcfg = animations.effect1,
     }
     local effect = projectileFactory.createAnimated(data)

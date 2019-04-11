@@ -11,7 +11,6 @@ function heroFactory.create()
     hero:addComponent(RecoverJumpForceByLand)
     hero:addComponent(Gravity)
     hero:addComponent(AccSystem)
-    hero:addComponent(PopHitEvent)
     hero:addComponent(RenderHitting)
     hero:addComponent(HitBack)
     hero:addComponent(Animator)
@@ -28,8 +27,6 @@ function heroFactory.create()
         friction = 15,
         layerMask = layerMask.player,
         maxJumpTime = 3,
-        bulletColor = { 0, 0.5, 0.6, 1 },
-        bulletLayer = layerMask.playerBullet,
         axMap = {},
         ayMap = {},
         ACT_IDLE = animations.hero_idle,

@@ -20,7 +20,7 @@ function Ability_Bullet:onSpellStart()
         v = 800,
         dir = dir,
         color = { 0, 0.5, 0.6, 1 },
-        layerMask = layerMask.playerBullet,
+        layerMask = layerMask.bullet,
     })
     bullet:show()
 end
@@ -40,18 +40,23 @@ end
 function Ability_Bullet:onProjectileHit(data)
     local target = data.target
     local projectile = data.projectile
+
     if target.layerMask == layerMask.brick then
         return true
-    else
-        --击中敌人
-        if self.entity.teamId ~= target.teamId then
-            target:popEvent("Hp_Damage", { damage = 1 })
-            target:popEvent("HitBack",{other = projectile})
-            target:addComponent(Modifier_Slow)
-            return true
-        end
+    end
+
+    if target.layerMask == layerMask.trigger then
         return false
     end
+
+    --击中敌人
+    if target.layerMask == layerMask.player and self.entity.teamId ~= target.teamId then
+        target:popEvent("Hp_Damage", { damage = 1 })
+        target:popEvent("HitBack", { other = projectile })
+        target:addComponent(Modifier_Slow)
+        return true
+    end
+    return false
 end
 
 return Ability_Bullet
