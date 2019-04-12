@@ -1,6 +1,6 @@
 local effectFactory = {}
 
-function effectFactory.create(data)
+function effectFactory.createAttachEffect(data)
     local entity = Entity:new()
     entity:addComponent(Animator)
     entity:addComponent(GameObject)
@@ -13,6 +13,54 @@ function effectFactory.create(data)
     entity.targetEntity = data.targetEntity
     entity.layerMask = layerMask.trigger
     return entity
+end
+
+function effectFactory.createProjectile(data)
+    local bulletEntity = Entity:new()
+    bulletEntity:addComponent(GameObject)
+    bulletEntity:addComponent(RenderRect)
+    bulletEntity:addComponent(TimeToLive)
+    bulletEntity:addComponent(CmdMove)
+    bulletEntity:addComponent(BulletAI)
+    bulletEntity:addComponent(Projectile)
+    bulletEntity:setData({
+        name = "bullet",
+        x = data.x,
+        y = data.y,
+        w = data.w,
+        h = data.h,
+        timeLife = data.timeLife,
+        v = data.v,
+        dir = data.dir,
+        color = data.color,
+        layerMask = layerMask.trigger,
+        caster = data.caster,
+    })
+    return bulletEntity
+end
+
+function effectFactory.createStill(data)
+    local bulletEntity = Entity:new()
+    bulletEntity:addComponent(GameObject)
+    bulletEntity:addComponent(RenderRect)
+    bulletEntity:addComponent(TimeToLive)
+    bulletEntity:addComponent(Projectile)
+
+    bulletEntity:setData({
+        name = "bullet",
+        x = data.x,
+        y = data.y,
+        w = data.w,
+        h = data.h,
+        timeLife = data.timeLife,
+        v = data.v,
+        dir = data.dir,
+        color = data.color,
+        layerMask = layerMask.trigger,
+        teamId = data.teamId,
+        caster = data.caster,
+    })
+    return bulletEntity
 end
 
 return effectFactory

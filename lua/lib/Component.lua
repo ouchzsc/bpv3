@@ -10,6 +10,9 @@ function Component:setActive(active)
     end
     self.isActive = active
     if active then
+        if self._onModifierEnable then
+            self._onModifierEnable()
+        end
         if self.onEnable then
             self:onEnable()
         end
@@ -24,6 +27,9 @@ function Component:setActive(active)
                 timer.globalTimer:Unschedule(id)
             end
             self.__timer_fixedids = nil
+        end
+        if self._onModifierDisable then
+            self._onModifierDisable()
         end
         if self.onDisable then
             self:onDisable()

@@ -10,7 +10,7 @@ function Ability_NearAttack:onSpellStart()
         x = entity.x - entity.w
     end
     y = entity.y
-    local bullet = projectileFactory.createStill({
+    local bullet = effectFactory.createStill({
         caster = entity,
         x = x,
         y = y,
@@ -21,6 +21,7 @@ function Ability_NearAttack:onSpellStart()
         dir = dir,
         color = { 1, 0.5, 0.6, 1 },
         layerMask = layerMask.bullet,
+        teamId = 2,
     })
     bullet:show()
 end

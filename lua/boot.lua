@@ -11,6 +11,10 @@ function boot.start()
     local cam = camMgr.get()
     cam:show()
     sceneMgr.load(Scene1, "config/map1.csv")
+
+    local panelMain = Entity:new()
+    panelMain:addComponent(PanelMain)
+    panelMain:show()
 end
 
 return boot

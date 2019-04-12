@@ -10,7 +10,7 @@ function Ability_Bullet:onSpellStart()
         x = entity.x - entity.w - 3
     end
     y = entity.y + entity.h / 2
-    local bullet = projectileFactory.create({
+    local bullet = effectFactory.createProjectile({
         caster = entity,
         x = x,
         y = y,

@@ -2,7 +2,7 @@ local Modifier_Slow = Modifier:extends()
 
 function Modifier_Slow:onEnable()
     Modifier.onEnable(self)
-    self.effect = effectFactory.create({
+    self.effect = effectFactory.createAttachEffect({
         animcfg = animations.effect_slow,
         targetEntity = self.entity
     })
@@ -23,7 +23,7 @@ function Modifier_Slow:onGetModifierMoveSpeedBonus_Percentage()
 end
 
 function Modifier_Slow:onGetDuration()
-    return 5
+    return 2
 end
 
 return Modifier_Slow
