@@ -11,7 +11,7 @@ function Entity:show()
     end
     self.isEnable = true
     self.components:ForEach(function(com, id)
-        com:setActive(true)
+        com:show()
     end)
 end
 
@@ -23,7 +23,7 @@ function Entity:hide()
 
     -- disable components
     self.components:ForEach(function(com, id)
-        com:setActive(false)
+        com:hide()
     end)
 end
 
@@ -31,7 +31,7 @@ function Entity:addComponent(comCls)
     local com = comCls:new({ entity = self })
     self.components:Add(com)
     if self.isEnable then
-        com:setActive(true)
+        com:show()
     end
     return com
 end
@@ -39,7 +39,7 @@ end
 function Entity:removeComponent(comCls)
     self.components:ForEach(function(com, id)
         if getmetatable(com) == comCls then
-            com:setActive(false)
+            com:hide()
             com.entity = nil
             com:destroy()
             self.components:Delete(id)
@@ -50,7 +50,7 @@ end
 function Entity:removeComponentInst(instance)
     self.components:ForEach(function(com, id)
         if com == instance then
-            com:setActive(false)
+            com:hide()
             com.entity = nil
             com:destroy()
             self.components:Delete(id)
@@ -61,7 +61,7 @@ end
 function Entity:removeOtherComponentInst(instance)
     self.components:ForEach(function(com, id)
         if getmetatable(com) == getmetatable(instance) and com ~= instance then
-            com:setActive(false)
+            com:hide()
             com.entity = nil
             com:destroy()
             self.components:Delete(id)

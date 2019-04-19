@@ -1,12 +1,12 @@
-local PanelMain = Component:extends()
+local PanelMain = UIComponent:extends()
 
 function PanelMain:onEnable()
-    self:reg(event.onDrawUi, function()
-        self:onRender()
-    end)
+    self.gridView = self:addChild(GridView)
 end
 
 function PanelMain:onRender()
+    self.gridView:setData({ ItemCls = SelectItem, Count = 3, dataList = {} })
+    self.gridView:show()
 end
 
 return PanelMain
