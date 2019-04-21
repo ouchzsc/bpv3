@@ -37,6 +37,10 @@ function Ability_Bullet:onGetAbilityCastAnimation()
     return "ACT_CAST_ABILITY_1"
 end
 
+function Ability_Bullet:onGetName()
+    return "BulletAb"
+end
+
 function Ability_Bullet:onProjectileHit(data)
     local target = data.target
     local projectile = data.projectile

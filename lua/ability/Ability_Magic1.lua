@@ -8,4 +8,8 @@ function Ability_Magic1:onSpellStart()
     effect:show()
 end
 
+function Ability_Magic1:onGetName()
+    return "MagicAb"
+end
+
 return Ability_Magic1

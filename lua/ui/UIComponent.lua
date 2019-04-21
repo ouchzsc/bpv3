@@ -1,17 +1,9 @@
 local UIComponent = Component:extends()
 
 function UIComponent:_onUIEnable()
-    self.evt_listen_onDrawUI = self:reg(event.onDrawUi, function()
-        self:onRender()
-    end)
-end
-
-function UIComponent:onRender()
-
 end
 
 function UIComponent:_onUIDisable()
-    self.evt_listen_onDraUI()
     self:removeChildren()
 end
 

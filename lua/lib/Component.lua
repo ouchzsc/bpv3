@@ -4,7 +4,7 @@ local function UnregisterEvtHandlerEach(unreg)
     unreg()
 end
 
-function Component:show()
+function Component:onEntityEnable()
     if self.isActive then
         if self.onRender then
             self.onRender()
@@ -26,7 +26,7 @@ function Component:show()
     end
 end
 
-function Component:hide()
+function Component:onEntityDisable()
     if not self.isActive then
         return
     end

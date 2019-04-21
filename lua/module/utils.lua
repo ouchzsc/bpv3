@@ -95,6 +95,26 @@ function utils.printt(t)
     print("------------------>")
 end
 
+function utils.print_r (t, indent, done)
+    done = done or {}
+    indent = indent or ''
+    local nextIndent -- Storage for next indentation value
+    for key, value in pairs (t) do
+        if type (value) == "table" and not done [value] then
+            nextIndent = nextIndent or
+                    (indent .. string.rep(' ',string.len(tostring (key))+2))
+            -- Shortcut conditional allocation
+            done [value] = true
+            print (indent .. "[" .. tostring (key) .. "] => Table {");
+            print  (nextIndent .. "{");
+            utils.print_r (value, nextIndent .. string.rep(' ',2), done)
+            print  (nextIndent .. "}");
+        else
+            print  (indent .. "[" .. tostring (key) .. "] => " .. tostring (value).."")
+        end
+    end
+end
+
 function utils.split(str, pat)
     local t = {} -- NOTE: use {n = 0} in Lua-5.0
     local fpat = "(.-)" .. pat

@@ -29,7 +29,7 @@ function Ability:onProjectileHit(data)
 end
 
 function Ability:onGetAbilityCastPoint()
-    return 0.5
+    return 0.02
 end
 
 function Ability:onGetAbilityCastAnimation()
@@ -46,6 +46,10 @@ function Ability:getLeftCd()
     else
         return self:onGetCd() - (timer.now - self.lastTime)
     end
+end
+
+function Ability:onGetName()
+    return "Unnamed Ability"
 end
 
 function Ability:setLastTime(time)
