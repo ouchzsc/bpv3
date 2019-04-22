@@ -1,6 +1,6 @@
 local Modifier = Component:extends()
 
-function Modifier:onEnable()
+function Modifier:_onModifierEnable()
     -- speed X
     self.entity.speedBase = self.entity.speedBase + self:onGetModifierMoveSpeedBonus_Constant()
     self.entity.speedPer = self.entity.speedPer * self:onGetModifierMoveSpeedBonus_Percentage()
@@ -26,7 +26,7 @@ function Modifier:onEnable()
     end
 end
 
-function Modifier:onDisable()
+function Modifier:_onModifierDisable()
     self.entity.speedBase = self.entity.speedBase - self:onGetModifierMoveSpeedBonus_Constant()
     self.entity.speedPer = self.entity.speedPer / self:onGetModifierMoveSpeedBonus_Percentage()
     if self:onGetStun() then

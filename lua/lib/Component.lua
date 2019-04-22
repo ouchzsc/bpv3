@@ -13,10 +13,7 @@ function Component:showCom()
     end
     self.isActive = true
     if self._onModifierEnable then
-        self._onModifierEnable()
-    end
-    if self._onUIEnable then
-        self:_onUIEnable()
+        self:_onModifierEnable()
     end
     if self.onEnable then
         self:onEnable()
@@ -43,9 +40,6 @@ function Component:hideCom()
     end
     if self._onModifierDisable then
         self:_onModifierDisable()
-    end
-    if self._onUIDisable then
-        self:_onUIDisable()
     end
     if self.onDisable then
         self:onDisable()

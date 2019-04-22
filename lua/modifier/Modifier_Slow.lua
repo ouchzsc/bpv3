@@ -1,7 +1,6 @@
 local Modifier_Slow = Modifier:extends()
 
 function Modifier_Slow:onEnable()
-    Modifier.onEnable(self)
     self.effect = effectFactory.createAttachEffect({
         animcfg = animations.effect_slow,
         targetEntity = self.entity
@@ -10,7 +9,6 @@ function Modifier_Slow:onEnable()
 end
 
 function Modifier_Slow:onDisable()
-    Modifier.onDisable(self)
     self.effect:hide()
 end
 
