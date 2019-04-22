@@ -1,4 +1,4 @@
-local PanelMain = UIComponent:extends()
+local PanelMain = Component:extends()
 local NewSelectItem = SelectItem:extends()
 
 function PanelMain:onEnable()
@@ -28,7 +28,7 @@ function PanelMain:onRender()
         table.insert(dataList, data)
     end
     entity.gridView:setData({ ItemCls = NewSelectItem, dataList = dataList })
-    entity.gridView:show(entity)
+    entity.gridView:showBy(entity)
 end
 
 return PanelMain

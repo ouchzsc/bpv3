@@ -1,4 +1,4 @@
-local SelectItem = UIComponent:extends()
+local SelectItem = Component:extends()
 
 function SelectItem:onEnable()
     self:reg(event.onDrawUi, function()

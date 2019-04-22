@@ -13,7 +13,7 @@ function boot.start()
     cam:show()
     sceneMgr.load(Scene1, "config/map1.csv")
 
-    ui={}
+    ui = {}
     ui.panelMain = Entity:new()
     ui.panelMain:addComponent(PanelMain)
     ui.panelMain:show()

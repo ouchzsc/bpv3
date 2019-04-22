@@ -1,6 +1,5 @@
 Object = require 'lua.lib.Object'
 Component = require 'lua.lib.Component'
-UIComponent = require 'lua.ui.UIComponent'
 Camera = require 'lua.component.Camera'
 CmdMove = require 'lua.component.CmdMove'
 GameObject = require 'lua.component.GameObject'
