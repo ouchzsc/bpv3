@@ -5,14 +5,27 @@ function Entity:onNew()
     self.children = {}
 end
 
+function Entity:addChild(child)
+    self.children[child] = true
+end
+
+function Entity:removeChild(child)
+    self.children[child] = nil
+end
+
 function Entity:show()
-    if self.isEnable then
-        return
-    end
     self.isEnable = true
     self.components:ForEach(function(com, id)
-        com:show()
+        com:showCom()
     end)
+end
+
+function Entity:showBy(parent)
+    self:show()
+    if parent then
+        self.parent = parent
+        parent:addChild(self)
+    end
 end
 
 function Entity:hide()
@@ -20,18 +33,28 @@ function Entity:hide()
         return
     end
     self.isEnable = false
-
     -- disable components
     self.components:ForEach(function(com, id)
-        com:hide()
+        com:hideCom()
     end)
+    -- hide my children
+    for child, _ in pairs(self.children) do
+        child:hide()
+    end
+    self.children = {}
+
+    --remove from parent
+    if self.parent then
+        self.parent:removeChild(self)
+        self.parent = nil
+    end
 end
 
 function Entity:addComponent(comCls)
     local com = comCls:new({ entity = self })
     self.components:Add(com)
     if self.isEnable then
-        com:show()
+        com:showCom()
     end
     return com
 end
@@ -39,9 +62,8 @@ end
 function Entity:removeComponent(comCls)
     self.components:ForEach(function(com, id)
         if getmetatable(com) == comCls then
-            com:hide()
+            com:hideCom()
             com.entity = nil
-            com:destroy()
             self.components:Delete(id)
         end
     end)
@@ -50,9 +72,8 @@ end
 function Entity:removeComponentInst(instance)
     self.components:ForEach(function(com, id)
         if com == instance then
-            com:hide()
+            com:hideCom()
             com.entity = nil
-            com:destroy()
             self.components:Delete(id)
         end
     end)
@@ -61,9 +82,8 @@ end
 function Entity:removeOtherComponentInst(instance)
     self.components:ForEach(function(com, id)
         if getmetatable(com) == getmetatable(instance) and com ~= instance then
-            com:hide()
+            com:hideCom()
             com.entity = nil
-            com:destroy()
             self.components:Delete(id)
         end
     end)
@@ -86,6 +106,5 @@ function Entity:popEvent(eventtype, data)
         end
     end)
 end
-
 
 return Entity

@@ -3,7 +3,7 @@ local MapDoor = Component:extends()
 function MapDoor:onPopEvent(type, data)
     if type == "onTrigger" then
         local other = data.other
-        if other.layerMask == layerMask.player then
+        if other.name == "hero" then
             sceneMgr.load(Scene1, self.entity.mapPath)
         end
     end

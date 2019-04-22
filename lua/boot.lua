@@ -7,14 +7,16 @@ function boot.start()
     event.init()
     timer.init()
     animations.init()
-    system:init()
+    system.init()
+    heroModule.init()
     local cam = camMgr.get()
     cam:show()
     sceneMgr.load(Scene1, "config/map1.csv")
 
-    local panelMain = Entity:new()
-    panelMain:addComponent(PanelMain)
-    panelMain:show()
+    ui = {}
+    ui.panelMain = Entity:new()
+    ui.panelMain:addComponent(PanelMain)
+    ui.panelMain:show()
 end
 
 return boot

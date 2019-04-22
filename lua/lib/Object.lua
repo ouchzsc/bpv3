@@ -25,11 +25,5 @@ function Object:setData(data)
     end
 end
 
-function Object:destroy()
-    self:onDestroy()
-end
-
-function Object:onDestroy()
-end
 
 return Object

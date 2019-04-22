@@ -2,11 +2,13 @@ local sceneMgr = {}
 
 function sceneMgr.load(cls, path)
     if sceneMgr.curScene then
-        sceneMgr.curScene:clear()
+        sceneMgr.curScene:hide()
     end
-    local scene = sceneFactory:create(cls, path):getComponent(cls)
-    scene:load()
-    sceneMgr.curScene = scene
+    local sceneEntity = Entity:new()
+    sceneEntity:addComponent(cls)
+    sceneEntity:setData({ mapPath = path })
+    sceneEntity:show()
+    sceneMgr.curScene = sceneEntity
 end
 
 return sceneMgr

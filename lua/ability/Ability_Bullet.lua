@@ -22,7 +22,7 @@ function Ability_Bullet:onSpellStart()
         color = { 0, 0.5, 0.6, 1 },
         layerMask = layerMask.bullet,
     })
-    bullet:show()
+    bullet:showBy(sceneMgr.curScene)
 end
 
 function Ability_Bullet:onGetCd()
@@ -35,6 +35,10 @@ end
 
 function Ability_Bullet:onGetAbilityCastAnimation()
     return "ACT_CAST_ABILITY_1"
+end
+
+function Ability_Bullet:onGetName()
+    return "BulletAb"
 end
 
 function Ability_Bullet:onProjectileHit(data)
