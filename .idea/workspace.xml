@@ -2,9 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24b4e667-8318-41c4-95ac-d4d537493e3b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lua/lib/Component.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/lib/Component.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/lib/Modifier.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/lib/Modifier.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autoScript/autoRequires.lua" beforeDir="false" afterPath="$PROJECT_DIR$/autoScript/autoRequires.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/ability/Ability_Bullet.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/ability/Ability_Bullet.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/ability/Ability_Magic1.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/ability/Ability_Magic1.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/ability/Ability_NearAttack.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/ability/Ability_NearAttack.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/boot.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/boot.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/component/MapDoor.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/component/MapDoor.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/component/cmd/CamFollowAI.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/component/cmd/CamFollowAI.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/component/cmd/PlayerCmd.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/component/cmd/PlayerCmd.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/component/scene/Scene.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/component/scene/Scene.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/component/ui/HeroHp.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/component/ui/HeroHp.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/component/ui/PhysicsInfo.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/component/ui/PhysicsInfo.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/component/ui/VerticalMenu.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/component/ui/VerticalMenu.lua" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lua/modifier/Modifier_Slow.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/modifier/Modifier_Slow.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/module/factory/heroFactory.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/module/factory/heroFactory.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/module/heroModule.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/module/heroModule.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/module/manager/camMgr.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/module/camModule.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/module/manager/heroMgr.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/module/manager/sceneMgr.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/module/sceneModule.lua" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,28 +32,31 @@
     <session id="-1576348812">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="lua" value="923" />
+          <entry key="lua" value="1213" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="lua" value="923" />
+          <entry key="lua" value="1213" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="lua" value="32" />
+          <entry key="csv" value="1" />
+          <entry key="lua" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="lua" value="32" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="lua" value="55" />
         </counts>
       </usages-collector>
     </session>
@@ -47,17 +66,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lua/component/scene/Scene.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="215">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lua/lib/Entity.lua">
+        <entry file="file://$PROJECT_DIR$/lua/component/ui/HeroHp.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="144">
+              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lua/component/ui/PhysicsInfo.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lua/boot.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -65,44 +102,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lua/module/heroModule.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+            <state relative-caret-position="159">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lua/lib/Component.lua">
+        <entry file="file://$PROJECT_DIR$/lua/module/factory/heroFactory.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autoScript/autoRequires.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lua/component/cmd/CamFollowAI.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lua/module/sceneModule.lua">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lua/lib/Modifier.lua">
+        <entry file="file://$PROJECT_DIR$/lua/module/camModule.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lua/modifier/Modifier_Slow.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lua/modifier/Modifier_Stun.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+            <state relative-caret-position="162">
+              <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -118,13 +164,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>render</find>
-      <find>setActive</find>
-      <find>setActive(false)</find>
-      <find>setActive(true)</find>
-      <find>items</find>
-      <find>print_r</find>
-      <find>heroMgr.get()</find>
       <find>children</find>
       <find>&quot;attack&quot;</find>
       <find>destroy</find>
@@ -148,6 +187,13 @@
       <find>_onUIEnable</find>
       <find>_onModifierEnable</find>
       <find>_onUIDisable</find>
+      <find>onGetIsMultiple</find>
+      <find>removeOtherComponentInst</find>
+      <find>scheduleTimerAtFixedRate</find>
+      <find>world</find>
+      <find>heroMgr</find>
+      <find>sceneMgr</find>
+      <find>camMgr</find>
     </findStrings>
     <replaceStrings>
       <replace>self:.</replace>
@@ -176,6 +222,8 @@
       <replace>show()</replace>
       <replace>hide()</replace>
       <replace>Component</replace>
+      <replace>sceneModule</replace>
+      <replace>camModule</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -184,10 +232,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lua/component/physics/RecoverJumpForceByLand.lua" />
-        <option value="$PROJECT_DIR$/lua/module/factory/doorFactory.lua" />
-        <option value="$PROJECT_DIR$/lua/component/Projectile.lua" />
-        <option value="$PROJECT_DIR$/lua/component/hit/PopHitEvent.lua" />
         <option value="$PROJECT_DIR$/lua/component/Hp.lua" />
         <option value="$PROJECT_DIR$/lua/component/hit/HitBack.lua" />
         <option value="$PROJECT_DIR$/lua/module/factory/particleFactory.lua" />
@@ -211,18 +255,13 @@
         <option value="$PROJECT_DIR$/lua/module/factory/projectileFactory.lua" />
         <option value="$PROJECT_DIR$/lua/module/factory/effectFactory.lua" />
         <option value="$PROJECT_DIR$/lua/ui/UiComponent.lua" />
-        <option value="$PROJECT_DIR$/autoScript/autoRequires.lua" />
         <option value="$PROJECT_DIR$/lua/module/utils.lua" />
-        <option value="$PROJECT_DIR$/lua/module/factory/heroFactory.lua" />
         <option value="$PROJECT_DIR$/lua/lib/Ability.lua" />
         <option value="$PROJECT_DIR$/lua/ui/SelectItem.lua" />
         <option value="$PROJECT_DIR$/lua/lib/Object.lua" />
         <option value="$PROJECT_DIR$/lua/ui/UIComponent.lua" />
-        <option value="$PROJECT_DIR$/lua/module/heroModule.lua" />
         <option value="$PROJECT_DIR$/conf.lua" />
         <option value="$PROJECT_DIR$/lua/component/scene/Scene1.lua" />
-        <option value="$PROJECT_DIR$/lua/module/manager/sceneMgr.lua" />
-        <option value="$PROJECT_DIR$/lua/boot.lua" />
         <option value="$PROJECT_DIR$/lua/ability/Ability_Magic1.lua" />
         <option value="$PROJECT_DIR$/lua/module/test.lua" />
         <option value="$PROJECT_DIR$/lua/ui/GridView.lua" />
@@ -231,16 +270,25 @@
         <option value="$PROJECT_DIR$/lua/ability/Ability_NearAttack.lua" />
         <option value="$PROJECT_DIR$/lua/component/MapDoor.lua" />
         <option value="$PROJECT_DIR$/lua/lib/Entity.lua" />
-        <option value="$PROJECT_DIR$/lua/component/scene/Scene.lua" />
         <option value="$PROJECT_DIR$/lua/lib/Modifier.lua" />
         <option value="$PROJECT_DIR$/lua/modifier/Modifier_Slow.lua" />
         <option value="$PROJECT_DIR$/lua/lib/Component.lua" />
+        <option value="$PROJECT_DIR$/autoScript/autoRequires.lua" />
+        <option value="$PROJECT_DIR$/lua/component/cmd/CamFollowAI.lua" />
+        <option value="$PROJECT_DIR$/lua/component/scene/Scene.lua" />
+        <option value="$PROJECT_DIR$/lua/component/ui/HeroHp.lua" />
+        <option value="$PROJECT_DIR$/lua/component/ui/PhysicsInfo.lua" />
+        <option value="$PROJECT_DIR$/lua/module/manager/sceneMgr.lua" />
+        <option value="$PROJECT_DIR$/lua/module/manager/camMgr.lua" />
+        <option value="$PROJECT_DIR$/lua/boot.lua" />
+        <option value="$PROJECT_DIR$/lua/module/heroModule.lua" />
+        <option value="$PROJECT_DIR$/lua/module/factory/heroFactory.lua" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="571" />
-    <option name="y" value="362" />
+    <option name="x" value="-49" />
+    <option name="y" value="105" />
     <option name="width" value="1750" />
     <option name="height" value="980" />
   </component>
@@ -253,6 +301,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -269,25 +318,6 @@
               <item name="bpv3" type="b2602c69:ProjectViewProjectNode" />
               <item name="bpv3" type="462c0819:PsiDirectoryNode" />
               <item name="lua" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bpv3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bpv3" type="462c0819:PsiDirectoryNode" />
-              <item name="lua" type="462c0819:PsiDirectoryNode" />
-              <item name="ability" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bpv3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bpv3" type="462c0819:PsiDirectoryNode" />
-              <item name="lua" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bpv3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bpv3" type="462c0819:PsiDirectoryNode" />
-              <item name="lua" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="scene" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bpv3" type="b2602c69:ProjectViewProjectNode" />
@@ -311,27 +341,34 @@
               <item name="bpv3" type="b2602c69:ProjectViewProjectNode" />
               <item name="bpv3" type="462c0819:PsiDirectoryNode" />
               <item name="lua" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bpv3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bpv3" type="462c0819:PsiDirectoryNode" />
+              <item name="lua" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="C:/Program Files/LOVE/love.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\doc\github\bpv3\lua\component" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\doc\github\bpv3\lua\module" />
+      <recent name="D:\doc\github\bpv3\lua\module\manager" />
       <recent name="D:\doc\github\bpv3\lua\lib" />
       <recent name="D:\doc\github\bpv3\lua\component\scene" />
-      <recent name="D:\doc\github\bpv3\lua\module\manager" />
       <recent name="D:\doc\github\bpv3\lua\module\factory" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\doc\github\bpv3\lua\component" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -446,49 +483,7 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lua/component/hit/PopHitEvent.lua" />
-    <entry file="file://$PROJECT_DIR$/lua/module/factory/brickFactory.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lua/module/factory/camFactory.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lua/module/factory/doorFactory.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lua/module/factory/sceneFactory.lua">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lua/module/factory/slimeFactory.lua">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lua/component/cmd/SlimeAI.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="77" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lua/component/attack/NearAttack.lua" />
-    <entry file="file://$PROJECT_DIR$/lua/module/layerMask.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lua/module/animations.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -501,13 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lua/component/GameObject.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="70" column="41" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -539,20 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lua/component/cmd/ZombieAI.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="69" lean-forward="true" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lua/module/factory/zombieFactory.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lua/module/utils.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -581,13 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lua/module/manager/heroMgr.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lua/lib/Object.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
@@ -601,13 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autoScript/autoRequires.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="52" column="27" lean-forward="true" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -625,13 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lua/module/manager/sceneMgr.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -643,13 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="78" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lua/module/manager/camMgr.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -681,13 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lua/boot.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lua/ability/Ability_Bullet.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -702,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lua/module/factory/heroFactory.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lua/component/MapDoor.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -716,31 +648,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lua/component/scene/Scene.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lua/lib/Entity.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lua/module/heroModule.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lua/lib/Modifier.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        <state relative-caret-position="648">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -753,15 +664,158 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lua/modifier/Modifier_Stun.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        <state relative-caret-position="270">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/lib/Entity.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="74" column="25" lean-forward="true" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/component/Camera.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/map1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/component/cmd/SlimeAI.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/component/cmd/ZombieAI.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="33" />
+          <folding>
+            <element signature="e#658#1002#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lua/lib/Component.lua">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/module/factory/zombieFactory.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/module/layerMask.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/component/GameObject.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/lib/bump.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84">
+          <caret line="326" lean-forward="true" selection-start-line="326" selection-end-line="326" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autoScript/autoRequires.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/component/cmd/CamFollowAI.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/component/ui/HeroHp.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/component/ui/PhysicsInfo.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/module/manager/heroMgr.lua">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/module/sceneModule.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/module/camModule.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/component/scene/Scene.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/module/heroModule.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/boot.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/module/factory/heroFactory.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>

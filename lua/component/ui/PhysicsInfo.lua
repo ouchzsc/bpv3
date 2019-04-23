@@ -2,7 +2,7 @@ local PhysicsInfo = Component:extends()
 
 function PhysicsInfo:onEnable()
     self:reg(event.onDrawUi, function()
-        local hero = heroMgr:get()
+        local hero = heroModule.getHero()
         if hero == nil then
             return
         end

@@ -31,7 +31,7 @@ function Scene:createEntity(v, x, y)
             x = x,
             y = y,
         })
-        heroMgr.set(entity)
+        heroModule.setHero(entity)
     elseif v == "zombie" then
         entity = zombieFactory.create()
         entity:setData({ x = x, y = y })

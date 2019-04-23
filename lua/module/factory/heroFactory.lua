@@ -2,11 +2,8 @@ local heroFactory = {}
 
 function heroFactory.create()
     local hero = Entity:new()
-    --hero:addComponent(RenderRect)
     hero:addComponent(GameObject)
     hero:addComponent(PlayerCmd)
-    hero:addComponent(Ability_Bullet)
-    hero:addComponent(Ability_Magic1)
     hero:addComponent(PhysicsMove)
     hero:addComponent(RecoverJumpForceByLand)
     hero:addComponent(Gravity)

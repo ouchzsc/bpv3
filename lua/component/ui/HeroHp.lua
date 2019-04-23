@@ -6,7 +6,7 @@ local scale = 1
 function HeroHp:onEnable()
     self.img = self.img or love.graphics.newImage(hpimgpath)
     self:reg(event.onDrawUi, function()
-        local hero = heroMgr:get()
+        local hero = heroModule.getHero()
         if hero==nil then
             return
         end

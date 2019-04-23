@@ -5,7 +5,7 @@ function Ability_Magic1:onSpellStart()
         animcfg = animations.effect1,
         targetEntity = self.entity
     })
-    effect:showBy(sceneMgr.curScene)
+    effect:showBy(sceneModule.curScene)
 end
 
 function Ability_Magic1:onGetName()

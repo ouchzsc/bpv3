@@ -3,7 +3,7 @@ local CamFollowAI = Component:extends()
 function CamFollowAI:onEnable()
     local entity = self.entity
     self:reg(event.onCmdUpdate, function(dt)
-        local target = heroMgr:get()
+        local target = heroModule.getHero()
         if target == nil then
             return
         end

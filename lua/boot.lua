@@ -8,10 +8,9 @@ function boot.start()
     timer.init()
     animations.init()
     system.init()
-    heroModule.init()
-    local cam = camMgr.get()
+    local cam = camModule.get()
     cam:show()
-    sceneMgr.load(Scene1, "config/map1.csv")
+    sceneModule.load(Scene1, "config/map1.csv")
 
     ui = {}
     ui.panelMain = Entity:new()

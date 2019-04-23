@@ -22,7 +22,7 @@ function Ability_Bullet:onSpellStart()
         color = { 0, 0.5, 0.6, 1 },
         layerMask = layerMask.bullet,
     })
-    bullet:showBy(sceneMgr.curScene)
+    bullet:showBy(sceneModule.curScene)
 end
 
 function Ability_Bullet:onGetCd()

@@ -23,7 +23,7 @@ function Ability_NearAttack:onSpellStart()
         layerMask = layerMask.bullet,
         teamId = 2,
     })
-    bullet:showBy(sceneMgr.curScene)
+    bullet:showBy(sceneModule.curScene)
 end
 
 function Ability_NearAttack:onGetAbilityCastAnimation()
