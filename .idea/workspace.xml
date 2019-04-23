@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24b4e667-8318-41c4-95ac-d4d537493e3b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autoScript/autoRequires.lua" beforeDir="false" afterPath="$PROJECT_DIR$/autoScript/autoRequires.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/ability/Ability_Bullet.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/ability/Ability_Bullet.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/ability/Ability_Magic1.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/ability/Ability_Magic1.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/ability/Ability_NearAttack.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/ability/Ability_NearAttack.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/boot.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/boot.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/component/MapDoor.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/component/MapDoor.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/component/cmd/CamFollowAI.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/component/cmd/CamFollowAI.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/component/cmd/PlayerCmd.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/component/cmd/PlayerCmd.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/component/scene/Scene.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/component/scene/Scene.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/component/ui/HeroHp.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/component/ui/HeroHp.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/component/ui/PhysicsInfo.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/component/ui/PhysicsInfo.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/component/ui/VerticalMenu.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/component/ui/VerticalMenu.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/modifier/Modifier_Slow.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/modifier/Modifier_Slow.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/module/factory/heroFactory.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/module/factory/heroFactory.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/module/heroModule.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/module/heroModule.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/module/manager/camMgr.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/module/camModule.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/module/manager/heroMgr.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lua/module/manager/sceneMgr.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/module/sceneModule.lua" afterDir="false" />
-    </list>
+    <list default="true" id="24b4e667-8318-41c4-95ac-d4d537493e3b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lua/module/factory/heroFactory.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="348">
+              <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -360,15 +340,15 @@
     <property name="last_opened_file_path" value="C:/Program Files/LOVE/love.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\doc\github\bpv3\lua\component" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\doc\github\bpv3\lua\module" />
       <recent name="D:\doc\github\bpv3\lua\module\manager" />
       <recent name="D:\doc\github\bpv3\lua\lib" />
       <recent name="D:\doc\github\bpv3\lua\component\scene" />
       <recent name="D:\doc\github\bpv3\lua\module\factory" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\doc\github\bpv3\lua\component" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -770,13 +750,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lua/module/manager/heroMgr.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lua/module/manager/heroMgr.lua" />
     <entry file="file://$PROJECT_DIR$/lua/module/sceneModule.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -814,8 +788,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lua/module/factory/heroFactory.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="348">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
         </state>
       </provider>
     </entry>
