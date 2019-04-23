@@ -5,7 +5,7 @@ function Modifier_Slow:onEnable()
         animcfg = animations.effect_slow,
         targetEntity = self.entity
     })
-    self.effect:showBy(sceneModule.curScene)
+    self.effect:showBy(self.entity)
 end
 
 function Modifier_Slow:onDisable()

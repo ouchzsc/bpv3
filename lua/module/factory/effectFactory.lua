@@ -5,9 +5,12 @@ function effectFactory.createAttachEffect(data)
     entity:addComponent(Animator)
     entity:addComponent(GameObject)
     entity:addComponent(Attach)
+
     entity.ACT_IDLE = data.animcfg
     entity.w = data.animcfg.width * data.animcfg.scale
     entity.h = data.animcfg.height * data.animcfg.scale
+    entity.offsetX = data.offsetX or 0
+    entity.offsetY = data.offsetY or 0
     entity.sortingOrder = 1
     entity.name = "effect"
     entity.targetEntity = data.targetEntity
@@ -40,13 +43,14 @@ function effectFactory.createProjectile(data)
 end
 
 function effectFactory.createStill(data)
-    local bulletEntity = Entity:new()
-    bulletEntity:addComponent(GameObject)
-    bulletEntity:addComponent(RenderRect)
-    bulletEntity:addComponent(TimeToLive)
-    bulletEntity:addComponent(Projectile)
+    local entity = Entity:new()
+    entity:addComponent(GameObject)
+    entity:addComponent(RenderRect)
+    entity:addComponent(TimeToLive)
+    entity:addComponent(Projectile)
+    entity:addComponent(Animator)
 
-    bulletEntity:setData({
+    entity:setData({
         name = "bullet",
         x = data.x,
         y = data.y,
@@ -59,8 +63,9 @@ function effectFactory.createStill(data)
         layerMask = layerMask.trigger,
         teamId = data.teamId,
         caster = data.caster,
+        ACT_IDLE = data.animcfg
     })
-    return bulletEntity
+    return entity
 end
 
 return effectFactory

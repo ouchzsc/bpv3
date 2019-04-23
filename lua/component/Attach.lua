@@ -7,8 +7,8 @@ function Attach:onEnable()
         if target then
             local cx, cy = utils.getCenter(target)
             local x, y = utils.getTopLeft(cx, cy, entity.w, entity.h)
-            entity.x = x
-            entity.y = y
+            entity.x = x + (target.offsetX or 0)
+            entity.y = y + (target.offsetY or 0)
         end
     end)
 end

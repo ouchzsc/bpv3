@@ -1,9 +1,12 @@
 local heroModule = {}
 
-function heroModule.setHero(heroEntity)
-    heroModule.hero = heroEntity
+function heroModule.init()
     heroModule.abilityIndex = 1
     heroModule.abilityList = { Ability_Bullet, Ability_Magic1 }
+end
+
+function heroModule.setHero(heroEntity)
+    heroModule.hero = heroEntity
     heroEntity:addComponent(heroModule.getCurAbility())
 end
 
