@@ -7,4 +7,10 @@ function camModule.get()
     return camModule.cam
 end
 
+function camModule.getWorldPos()
+    if camModule.cam then
+        
+    end
+end
+
 return camModule

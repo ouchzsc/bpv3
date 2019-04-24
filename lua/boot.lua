@@ -1,6 +1,8 @@
 local boot = {}
 
 function boot.start()
+    love.graphics.setDefaultFilter('nearest')
+    love.graphics.setLineStyle("rough")
     world = bump.newWorld(gVariables.worldCellSize)
     gVariables.init()
     layerMask.init()

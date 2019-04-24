@@ -2,6 +2,18 @@ local Ability_Magic1 = Ability:extends()
 
 function Ability_Magic1:onSpellStart()
     local entity = self.entity
+
+    local mx, my = love.mouse.getPosition()
+    local iteminfo,len = world:querySegmentWithCoords(mx,my,mx,my+2000,function (item)
+        return item.layerMask == layerMask.brick
+    end)
+    print(iteminfo,len)
+    if iteminfo then
+        --utils.print_r(iteminfo)
+    else
+        print("nil")
+    end
+
     local dir = entity.dir
     local x, y
     if dir > 0 then
@@ -10,15 +22,16 @@ function Ability_Magic1:onSpellStart()
         x = entity.x - 200
     end
     y = entity.y
-
+    local w = animations.effect1.width * animations.effect1.scale
+    local h = animations.effect1.height * animations.effect1.scale
     local effect = effectFactory.createStill({
         animcfg = animations.effect1,
         targetEntity = self.entity,
         x = x,
-        y = y,
-        w = entity.w,
-        h = entity.h,
-        timerLife = 1,
+        y = y + entity.h - h,
+        w = w,
+        h = h,
+        timeLife = 1,
         layerMask = layerMask.bullet,
         teamId = 2,
         caster = self.entity
@@ -28,6 +41,10 @@ end
 
 function Ability_Magic1:onGetName()
     return "MagicAb"
+end
+
+function Ability_Magic1:onGetAbilityCastPoint()
+    return 0.2
 end
 
 function Ability_Magic1:onProjectileHit(data)

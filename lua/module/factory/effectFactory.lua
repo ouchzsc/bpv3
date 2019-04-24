@@ -45,7 +45,7 @@ end
 function effectFactory.createStill(data)
     local entity = Entity:new()
     entity:addComponent(GameObject)
-    entity:addComponent(RenderRect)
+    --entity:addComponent(RenderRect)
     entity:addComponent(TimeToLive)
     entity:addComponent(Projectile)
     entity:addComponent(Animator)
@@ -57,9 +57,9 @@ function effectFactory.createStill(data)
         w = data.w,
         h = data.h,
         timeLife = data.timeLife,
-        v = data.v,
-        dir = data.dir,
-        color = data.color,
+        --v = data.v,
+        --dir = data.dir,
+        --color = data.color,
         layerMask = layerMask.trigger,
         teamId = data.teamId,
         caster = data.caster,
