@@ -45,7 +45,7 @@ end
 function effectFactory.createStill(data)
     local entity = Entity:new()
     entity:addComponent(GameObject)
-    --entity:addComponent(RenderRect)
+    entity:addComponent(RenderRect)
     entity:addComponent(TimeToLive)
     entity:addComponent(Projectile)
     entity:addComponent(Animator)

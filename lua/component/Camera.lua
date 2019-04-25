@@ -7,9 +7,10 @@ function Camera:onEnable()
         local scale = math.min(love.graphics.getWidth() / w, love.graphics.getHeight() / h)
         entity.scale = scale
         local gameObjects, len = world:queryRect(x, y, w, h)
+        local scale, tx, ty = test.testCam()
         love.graphics.push()
         love.graphics.scale(scale, scale)
-        love.graphics.translate(-x, -y)
+        love.graphics.translate(tx , ty )
         love.graphics.rectangle("line", x, y, w, h)
         table.sort(gameObjects, function(a, b)
             local sort_a = a.sortingOrder or 0
