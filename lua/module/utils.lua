@@ -34,6 +34,24 @@ function utils.getAxisArrow()
     return x, y
 end
 
+function utils.getMouseWorldPos()
+    local cam = camModule.get()
+    if cam then
+        local x, y, w, h = cam.x or 0, cam.y or 0, cam.w, cam.h
+        local screenW = love.graphics.getWidth()
+        local screenH = love.graphics.getHeight()
+        local scaleX = screenW / w
+        local scaleY = screenH / h
+        local scale = math.min(scaleX, scaleY)
+        local mouseX, mouseY = love.mouse.getPosition()
+        local px = (screenW - w * scale) / 2
+        local py = (screenH - h * scale) / 2
+        local mworldX = (mouseX - px) / scale + x
+        local mworldY = (mouseY - py) / scale + y
+        return mworldX, mworldY
+    end
+end
+
 function utils.assertType(desiredType, value, name)
     if type(value) ~= desiredType then
         error(name .. ' must be a ' .. desiredType .. ', but was ' .. tostring(value) .. '(a ' .. type(value) .. ')')
@@ -99,18 +117,18 @@ function utils.print_r (t, indent, done)
     done = done or {}
     indent = indent or ''
     local nextIndent -- Storage for next indentation value
-    for key, value in pairs (t) do
-        if type (value) == "table" and not done [value] then
+    for key, value in pairs(t) do
+        if type(value) == "table" and not done[value] then
             nextIndent = nextIndent or
-                    (indent .. string.rep(' ',string.len(tostring (key))+2))
+                    (indent .. string.rep(' ', string.len(tostring(key)) + 2))
             -- Shortcut conditional allocation
-            done [value] = true
-            print (indent .. "[" .. tostring (key) .. "] => Table {");
-            print  (nextIndent .. "{");
-            utils.print_r (value, nextIndent .. string.rep(' ',2), done)
-            print  (nextIndent .. "}");
+            done[value] = true
+            print(indent .. "[" .. tostring(key) .. "] => Table {");
+            print(nextIndent .. "{");
+            utils.print_r(value, nextIndent .. string.rep(' ', 2), done)
+            print(nextIndent .. "}");
         else
-            print  (indent .. "[" .. tostring (key) .. "] => " .. tostring (value).."")
+            print(indent .. "[" .. tostring(key) .. "] => " .. tostring(value) .. "")
         end
     end
 end

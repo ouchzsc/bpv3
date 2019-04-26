@@ -3,17 +3,10 @@ local Ability_Magic1 = Ability:extends()
 function Ability_Magic1:onSpellStart()
     local entity = self.entity
 
-    local mx, my = love.mouse.getPosition()
-    local iteminfo,len = world:querySegmentWithCoords(mx,my,mx,my+2000,function (item)
+    local mx, my = utils.getMouseWorldPos()
+    local iteminfo, len = world:querySegmentWithCoords(mx, my, mx, my + 2000, function(item)
         return item.layerMask == layerMask.brick
     end)
-    print(iteminfo,len)
-    if iteminfo then
-        --utils.print_r(iteminfo)
-    else
-        print("nil")
-    end
-
     local dir = entity.dir
     local x, y
     if dir > 0 then
@@ -22,6 +15,14 @@ function Ability_Magic1:onSpellStart()
         x = entity.x - 200
     end
     y = entity.y
+    if len > 1 then
+        utils.printt(iteminfo[1])
+        x = iteminfo[1].x1
+        y = iteminfo[1].y1-50
+    else
+        print("nil")
+    end
+
     local w = animations.effect1.width * animations.effect1.scale
     local h = animations.effect1.height * animations.effect1.scale
     local effect = effectFactory.createStill({
