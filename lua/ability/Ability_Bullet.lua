@@ -55,8 +55,8 @@ function Ability_Bullet:onProjectileHit(data)
 
     --击中敌人
     if target.layerMask == layerMask.player and self.entity.teamId ~= target.teamId then
-        target:popEvent("Hp_Damage", { damage = 1 })
-        target:popEvent("HitBack", { other = projectile })
+        target:popEvent("Hp_Damage", { damage = 1, src = projectile })
+        target:popEvent("HitBack", { other = projectile, src = projectile })
         target:addComponent(Modifier_Slow)
         return true
     end

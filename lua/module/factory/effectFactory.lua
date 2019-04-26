@@ -45,21 +45,18 @@ end
 function effectFactory.createStill(data)
     local entity = Entity:new()
     entity:addComponent(GameObject)
-    entity:addComponent(RenderRect)
+    --entity:addComponent(RenderRect)
     entity:addComponent(TimeToLive)
     entity:addComponent(Projectile)
     entity:addComponent(Animator)
-
     entity:setData({
-        name = "bullet",
+        name = data.name or "stillEffect",
         x = data.x,
         y = data.y,
         w = data.w,
         h = data.h,
         timeLife = data.timeLife,
-        --v = data.v,
-        --dir = data.dir,
-        --color = data.color,
+        sortingOrder = data.sortingOrder,
         layerMask = layerMask.trigger,
         teamId = data.teamId,
         caster = data.caster,

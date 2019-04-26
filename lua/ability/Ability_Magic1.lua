@@ -7,45 +7,40 @@ function Ability_Magic1:onSpellStart()
     local iteminfo, len = world:querySegmentWithCoords(mx, my, mx, my + 2000, function(item)
         return item.layerMask == layerMask.brick
     end)
-    local dir = entity.dir
     local x, y
-    if dir > 0 then
-        x = entity.x + 200
-    else
-        x = entity.x - 200
-    end
-    y = entity.y
-    if len > 1 then
-        utils.printt(iteminfo[1])
+    if len > 0 then
         x = iteminfo[1].x1
-        y = iteminfo[1].y1-50
-    else
-        print("nil")
+        y = iteminfo[1].y1
+        local w = animations.effect1.width * animations.effect1.scale
+        local h = animations.effect1.height * animations.effect1.scale
+        local effect = effectFactory.createStill({
+            animcfg = animations.effect1,
+            targetEntity = self.entity,
+            x = x - w / 2,
+            y = y - h,
+            w = w,
+            h = h,
+            timeLife = 1,
+            layerMask = layerMask.bullet,
+            teamId = 2,
+            caster = self.entity,
+            sortingOrder = 2,
+            name = "Ability_Magic1_effect"
+        })
+        effect:showBy(sceneModule.curScene)
     end
-
-    local w = animations.effect1.width * animations.effect1.scale
-    local h = animations.effect1.height * animations.effect1.scale
-    local effect = effectFactory.createStill({
-        animcfg = animations.effect1,
-        targetEntity = self.entity,
-        x = x,
-        y = y + entity.h - h,
-        w = w,
-        h = h,
-        timeLife = 1,
-        layerMask = layerMask.bullet,
-        teamId = 2,
-        caster = self.entity
-    })
-    effect:showBy(sceneModule.curScene)
 end
 
 function Ability_Magic1:onGetName()
     return "MagicAb"
 end
 
+function Ability_Magic1:onGetCd()
+    return 0.1
+end
+
 function Ability_Magic1:onGetAbilityCastPoint()
-    return 0.2
+    return 0
 end
 
 function Ability_Magic1:onProjectileHit(data)
@@ -62,8 +57,8 @@ function Ability_Magic1:onProjectileHit(data)
 
     --击中敌人
     if target.layerMask == layerMask.player and self.entity.teamId ~= target.teamId then
-        target:popEvent("Hp_Damage", { damage = 1 })
-        target:popEvent("HitBack", { other = projectile })
+        target:popEvent("Hp_Damage", { damage = 1, src = projectile })
+        target:popEvent("HitBack", { other = projectile, src = projectile })
     end
     return false
 end

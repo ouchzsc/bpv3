@@ -7,10 +7,4 @@ function camModule.get()
     return camModule.cam
 end
 
-function camModule.getWorldPos()
-    if camModule.cam then
-        local scale = camModule.cam.scale
-    end
-end
-
 return camModule

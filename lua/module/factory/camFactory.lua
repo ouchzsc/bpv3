@@ -5,7 +5,7 @@ function camFactory.create()
     camera:addComponent(ArrowCmd)
     --camera:addComponent(CmdMove)
     camera:addComponent(CamFollowAI)
-    camera:setData({ x = 0, y = 0, w = 1280, h = 720 })
+    camera:setData({ x = 0, y = 0, w = 800, h = 300 })
     return camera
 end
 return camFactory
