@@ -5,7 +5,8 @@ function effectFactory.createAttachEffect(data)
     entity:addComponent(Animator)
     entity:addComponent(GameObject)
     entity:addComponent(Attach)
-
+    entity.x = data.targetEntity.x
+    entity.y = data.targetEntity.y
     entity.ACT_IDLE = data.animcfg
     entity.w = data.animcfg.width * data.animcfg.scale
     entity.h = data.animcfg.height * data.animcfg.scale
@@ -55,8 +56,10 @@ function effectFactory.createStill(data)
         y = data.y,
         w = data.w,
         h = data.h,
+        dir = data.dir,
+        animcfg = data.animcfg,
         timeLife = data.timeLife,
-        sortingOrder = data.sortingOrder,
+        sortingOrder = data.sortingOrder or 2,
         layerMask = layerMask.trigger,
         teamId = data.teamId,
         caster = data.caster,

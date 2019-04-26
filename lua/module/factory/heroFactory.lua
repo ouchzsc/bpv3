@@ -1,18 +1,20 @@
 local heroFactory = {}
 
 function heroFactory.create()
-    local hero = Entity:new()
-    hero:addComponent(GameObject)
-    hero:addComponent(PlayerCmd)
-    hero:addComponent(PhysicsMove)
-    hero:addComponent(RecoverJumpForceByLand)
-    hero:addComponent(Gravity)
-    hero:addComponent(AccSystem)
-    hero:addComponent(RenderHitting)
-    hero:addComponent(HitBack)
-    hero:addComponent(Animator)
+    local entity = Entity:new()
+    entity:addComponent(GameObject)
+    entity:addComponent(PlayerCmd)
+    entity:addComponent(PhysicsMove)
+    entity:addComponent(RecoverJumpForceByLand)
+    entity:addComponent(Gravity)
+    entity:addComponent(AccSystem)
+    entity:addComponent(RenderHitting)
+    entity:addComponent(HitBack)
+    entity:addComponent(Animator)
+    entity:addComponent(Hp)
+    entity:addComponent(HeroHp)
 
-    hero:setData({
+    entity:setData({
         name = 'hero',
         hp = 5,
         w = 22,
@@ -29,7 +31,7 @@ function heroFactory.create()
         ACT_IDLE = animations.hero_idle,
         ACT_CAST_ABILITY_1 = animations.hero_attack1,
     })
-    return hero
+    return entity
 end
 
 return heroFactory

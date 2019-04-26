@@ -15,14 +15,13 @@ function Ability_Magic1:onSpellStart()
         local h = animations.effect1.height * animations.effect1.scale
         local effect = effectFactory.createStill({
             animcfg = animations.effect1,
-            targetEntity = self.entity,
             x = x - w / 2,
             y = y - h,
             w = w,
             h = h,
             timeLife = 1,
             layerMask = layerMask.bullet,
-            teamId = 2,
+            teamId = self.entity.teamId,
             caster = self.entity,
             sortingOrder = 2,
             name = "Ability_Magic1_effect"
@@ -36,7 +35,7 @@ function Ability_Magic1:onGetName()
 end
 
 function Ability_Magic1:onGetCd()
-    return 0.1
+    return 0.4
 end
 
 function Ability_Magic1:onGetAbilityCastPoint()

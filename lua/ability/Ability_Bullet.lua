@@ -26,11 +26,11 @@ function Ability_Bullet:onSpellStart()
 end
 
 function Ability_Bullet:onGetCd()
-    return 0.3
+    return 0.2
 end
 
 function Ability_Bullet:onGetAbilityCastPoint()
-    return 0.3
+    return 0.1
 end
 
 function Ability_Bullet:onGetAbilityCastAnimation()

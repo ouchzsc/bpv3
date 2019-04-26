@@ -46,6 +46,15 @@ function animations.init()
         loopTime = 1,
         scale = 1
     }
+    animations.effect_attack={
+        imgPath = "img/effect_attack.png",
+        width = 8,
+        height = 15,
+        space = 0,
+        cnt = 3,
+        loopTime = 0.5,
+        scale = 3
+    }
 end
 
 return animations

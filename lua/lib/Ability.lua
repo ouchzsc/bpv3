@@ -61,7 +61,8 @@ function Ability:_startPlayAnim()
     local animationKey = self:onGetAbilityCastAnimation()
     local animcfg = entity[animationKey]
     self.entity:popEvent("Aniamtor_Play", animcfg)
-    local animtime = animcfg.loopTime
+    local animtime = self:onGetCd() --or animcfg.loopTime
+    animcfg.animloop = animtime
     self:scheduleTimer("anim_duration", animtime, function()
         self:_stopPlayAnim()
     end)
@@ -76,7 +77,7 @@ function Ability:_stopPlayAnim()
 end
 
 function Ability:addModifier(cls)
-    if self.entity.modifiers==nil then
+    if self.entity.modifiers == nil then
         self.entity.modifiers = Stream:New()
     end
     self.entity.modifiers:Put(cls)
