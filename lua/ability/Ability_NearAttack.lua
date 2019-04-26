@@ -7,7 +7,7 @@ function Ability_NearAttack:onSpellStart()
     if dir > 0 then
         x = entity.x + entity.w
     else
-        x = entity.x - animations.effect_attack.width
+        x = entity.x - animations.effect_attack.width * animations.effect_attack.scale/2
     end
     y = entity.y
     local bullet = effectFactory.createStill({
@@ -15,9 +15,9 @@ function Ability_NearAttack:onSpellStart()
         caster = entity,
         x = x,
         y = y,
-        w = animations.effect_attack.width,
+        w = animations.effect_attack.width * animations.effect_attack.scale/2,
         h = entity.h,
-        timeLife = 0.5,
+        timeLife = 1,
         dir = dir,
         color = { 1, 0.5, 0.6, 1 },
         layerMask = layerMask.bullet,
